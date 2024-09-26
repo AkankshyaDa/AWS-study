@@ -1,0 +1,1 @@
+This repository contain AWS related study notes.
