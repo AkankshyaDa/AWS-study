@@ -1,0 +1,22 @@
+----------------------------
+Date- 23/09/2024
+----------------------------
+1> In Private VPC by default subnet and internet gateway, NAT gateway will not create, we have have to create it seperately.
+2> In one region maximum by default 5 VPCs we cancreate, if want more then we need to raise request to AWS Support and can create.
+3> We can create Private VPC, internet gatway and subnets within  AWS free tier account, for NAT gateway it will charge.
+4> Private VPC can't connect to internet directly, it can connect through NAT gateway then NAT gateway to internet gate way then it will connect to internet.
+5> NAT gateway can be host in public subnet.
+6> There are 2 types of VPC
+	a> Default VPC - Each AWS account comes with a default VPC in each region. It is automatically configured with a subnet in each Availability Zone and allows for easy setup of instances with public IPs.
+	b> Custom VPC - Users can create their own VPCs tailored to specific needs. This includes defining the IP address range, subnets, route tables, and gateways.
+--------------------------
+Date- 25/09/2024
+--------------------------
+1> how to calculate CIDR range in CIDR VPC with simple example
+ans:- 10.0.0.0/16 = 10.0.0-255.0-255 10.0.0.0 and 10.0.255.255
+	here in the above example first(10.0) 16 bits are represent to network part and remaining 16 bits (0.0) represent for host.
+	10.0.0.0/16 here 10.0 can't be cahnge rest 10.0.0-255.0-255 can be modify
+	10.0.0.0 this IP can't be use (this is the starting address and not usable for hosts)
+	10.0.255.255 this IP can't be use (this is the last address in the range and not usable for hosts)
+	Total usable ips 2 the power (32−16) − 2 = 65,534 usable addresses (subtracting 2 for the network and broadcast addresses)
+so here 172.31.0.0/16 means 172.31.1-254.1-254
